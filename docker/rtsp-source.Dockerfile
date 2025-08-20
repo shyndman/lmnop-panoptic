@@ -1,4 +1,5 @@
-FROM alexxit/go2rtc:master-hardware
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
 
 # Install v4l-utils for camera control
 RUN apt-get update && apt-get install -y --no-install-recommends \
